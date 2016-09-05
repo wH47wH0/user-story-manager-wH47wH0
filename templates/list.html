@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>User Story Manager</head>
+    <body>
+        <h2>User Story Manager</h2>
+        <a href="add_story">Add a new User Story</a>
+        <table>
+            {% for user_story in user_stories %}
+            <tr>
+                <td> {{user_story.story_title}} </td>
+                <td> {{user_story.user_story}} </td>
+                <td> {{user_story.acceptence_criteria}} </td>
+                <td> {{user_story.business_value}} </td>
+                <td> {{user_story.estimation}} </td>
+                <td> {{user_story.status}} </td>
+            </tr>
+        </table>
+    </body>
+</html>
