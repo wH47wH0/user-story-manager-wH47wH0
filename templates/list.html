@@ -1,11 +1,20 @@
 <!doctype html>
 <html>
-    <head>User Story Manager</head>
+    <head>
+        <title>User Story Manager</title></head>
     <body>
         <h2>User Story Manager</h2>
         <button type="button" id="add_story" name="add_story"><a href="/story/">Add a new User Story</a></button>
-        <table>
+        <table border="1">
             {% for user_story in user_stories %}
+            <tr>
+                <th>Story Title</th>
+                <th>User Story</th>
+                <th>Acceptance Criteria</th>
+                <th>Business Value</th>
+                <th>Estimation (h)</th>
+                <th>Status</th>
+            </tr>
             <tr>
                 <td> {{ user_story.story_title }} </td>
                 <td> {{ user_story.user_story }} </td>
@@ -13,6 +22,9 @@
                 <td> {{ user_story.business_value }} </td>
                 <td> {{ user_story.estimation }} </td>
                 <td> {{ user_story.status }} </td>
+                <td><a href="update.html"><img src="/static/recycle_bin_trash_full_garbage-128.png" height="16"
+                                               width="16"></a>
+                    <a href="/delete/"><img src="/static/pen-checkbox-128.png" height="16" width="16"></a></td>
             </tr>
             {% endfor %}
         </table>

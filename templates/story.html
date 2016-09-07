@@ -1,13 +1,7 @@
-<!doctype html>
-<head>User Story Manager  - Add new Story</head>
-<body>
-<form action="/create/", method="post">
-    <label>Story Title <input name="story_title" id="story_title"></label>
-    <label>User Story <input name="user_story" id="user_story"></label>
-    <label>Acceptance Criteria <input name="acceptance_criteria" id="acceptance_criteria"></label>
-    <label>Business Value <input name="business_value" id="business_value"></label>
-    <label>Estimation (h) <input name="estimation" id="estimation"></label>
-    <label>Status <input name="status" id="status"></label>
-    {% block button %}{% endblock %}
-</form>
-</body>
+{% extends 'base.html' %}
+{% block button %}
+<label>Create <input type="submit" name="create", id="create"></label>
+{% endblock %}
+{% block title %}
+Add new User Story
+{% endblock %}

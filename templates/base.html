@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+    <title>User Story Manager - {% block title %}</title>
+</head>
+<body>
+    <form action="/create/" method="post">
+        <label>Story Title <br><input name="story_title" id="story_title"></label><br>
+        <label>User Story <br><textarea name="user_story" id="user_story"></textarea></label><br>
+        <label>Acceptance Criteria <br><textarea name="acceptance_criteria" id="acceptance_criteria"></textarea></label><br>
+        <label>Business Value <br><input type="number" step="100" min="100" max="1500" name="business_value"
+                                         id="business_value"></label><br>
+        <label>Estimation (h) <br><input type="number" step="0.5" min="0.5" max="40" name="estimation"
+                                         id="estimation"></label><br>
+        <label>Status <br>
+            <select name="status" id="status">
+                <option>Planning</option>
+                <option>To Do</option>
+                <option>In Progress</option>
+                <option>Review</option>
+                <option>Done</option>
+            </select>
+        </label><br>
+        {% block button %}{% endblock %}
+    </form>
+</body>

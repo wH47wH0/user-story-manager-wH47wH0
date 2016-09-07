@@ -92,4 +92,3 @@ ENV/
 
 .gitignore
 .idea/
-static/
